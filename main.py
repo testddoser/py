@@ -1,10 +1,10 @@
 import telebot
 
 print("!BOT STARTED!")
-bot.sendmessage(1199404728, "!BOT STARTED!")
 
 # Создаем объект бота
 bot = telebot.TeleBot('6305832366:AAE7bDANfSymlLY9R5Wb8ypbQMH3pHP3QRs')
+bot.sendmessage(1199404728, "!BOT STARTED!")
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):

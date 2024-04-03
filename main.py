@@ -1,8 +1,19 @@
-import requests
-import time
+import telebot
 
-a = requests.get("https://grabify.org/2UPJ")
+print("!BOT STARTED!")
+bot.sendmessage(1199404728, "!BOT STARTED!")
 
-print(a.text)
+# Создаем объект бота
+bot = telebot.TeleBot('6305832366:AAE7bDANfSymlLY9R5Wb8ypbQMH3pHP3QRs')
 
-time.sleep(60)
+@bot.message_handler(commands=['start', 'help'])
+def send_welcome(message):
+    bot.reply_to(message, "Hello! I'm a simple bot. Type something and I will try to answer.")
+
+@bot.message_handler(content_types=['text'])
+def handle_message(message):
+    # Отвечаем на сообщение пользователя
+    bot.reply_to(message, message.text)
+
+# Запускаем бота
+bot.infinity_polling()

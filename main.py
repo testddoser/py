@@ -1,4 +1,5 @@
 import telebot
+import time
 
 print("!BOT STARTED!")
 

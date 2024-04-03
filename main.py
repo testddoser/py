@@ -13,7 +13,7 @@ def send_welcome(message):
 
 while True:
     time.sleep(20)
-    bot.send_message(1199404728, "Провшло 20 секунд")
+    bot.send_message(1199404728, "Прошло 20 секунд")
 
 # Запускаем бота
 bot.infinity_polling()
